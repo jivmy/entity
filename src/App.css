@@ -39,7 +39,7 @@
 .project-square {
   aspect-ratio: 1;
   background: rgba(0, 0, 0, 0.03);
-  border-radius: 36px;
+  border-radius: 48px 48px 36px 36px;
   cursor: pointer;
 }
 
@@ -62,7 +62,7 @@
 
 .modal-content {
   background: white;
-  border-radius: 24px;
+  border-radius: 48px 48px 36px 36px;
   max-width: 900px;
   width: 100%;
   max-height: 90vh;
@@ -80,7 +80,7 @@
 
 .modal-image {
   background: rgba(0, 0, 0, 0.03);
-  border-radius: 24px 0 0 24px;
+  border-radius: 48px 0 0 36px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@
   }
 
   .modal-image {
-    border-radius: 24px 24px 0 0;
+    border-radius: 48px 48px 0 0;
     min-height: 200px;
   }
 
