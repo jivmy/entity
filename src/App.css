@@ -41,6 +41,12 @@
   background: rgba(0, 0, 0, 0.03);
   border-radius: 48px 48px 36px 36px;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-square canvas {
+  border-radius: 48px 48px 36px 36px;
 }
 
 /* Modal Styles */
@@ -85,12 +91,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .modal-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.modal-image canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .modal-text {

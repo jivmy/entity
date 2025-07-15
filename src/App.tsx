@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import Spline from '@splinetool/react-spline'
 import './App.css'
 
 interface Project {
@@ -11,8 +12,8 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Project Title",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    title: "Liquid Orb",
+    content: "We set up the project and site today, and prototyped this little squish orb."
   },
   {
     id: 2,
@@ -193,21 +194,26 @@ function App() {
             key={index}
             className="project-square"
             whileHover={{ 
-              backgroundColor: 'rgba(0, 0, 0, 0.12)',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-              transition: { duration: 0.3, ease: "easeOut" }
+              scale: 0.98,
+              transition: { duration: 0.1, ease: "easeOut" }
             }}
             whileTap={{ 
-              scale: 0.95,
-              backgroundColor: 'rgba(0, 0, 0, 0.15)',
-              transition: { duration: 0.15, ease: "easeOut" }
+              scale: 0.85,
+              transition: { duration: 0.05, ease: "easeOut" }
             }}
             animate={{ 
               scale: selectedProject === index + 1 ? 1.02 : 1,
-              transition: { duration: 0.4, ease: "easeOut" }
+              transition: { duration: 0.15, ease: "easeOut" }
             }}
             onClick={() => handleCardClick(index + 1)}
-          />
+          >
+            {index === 0 && (
+              <Spline
+                scene="https://prod.spline.design/JdbvbYcBJ3kLEMir/scene.splinecode"
+                style={{ width: '100%', height: '100%', borderRadius: '48px 48px 36px 36px' }}
+              />
+            )}
+          </motion.div>
         ))}
       </div>
 
@@ -230,7 +236,14 @@ function App() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="modal-grid">
-                <div className="modal-image"></div>
+                <div className="modal-image">
+                  {selectedProject === 1 ? (
+                    <Spline
+                      scene="https://prod.spline.design/JdbvbYcBJ3kLEMir/scene.splinecode"
+                      style={{ width: '100%', height: '100%' }}
+                    />
+                  ) : null}
+                </div>
                 <div className="modal-text">
                   <h2>{selectedProjectData.title}</h2>
                   <p className="modal-body">{selectedProjectData.content}</p>
