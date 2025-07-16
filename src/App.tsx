@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title">Entity Grid</h1>
+      <h1 className="title">Material Entity</h1>
       <div className="projects-grid">
         {Array.from({ length: 32 }, (_, index) => (
           <motion.div
