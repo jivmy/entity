@@ -49,6 +49,23 @@
   border-radius: 48px 48px 36px 36px;
 }
 
+/* Tooltip Styles */
+.tooltip {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: black;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1000;
+  white-space: nowrap;
+  font-family: 'Ginto Copilot', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
 /* Modal Styles */
 .modal-overlay {
   position: fixed;
@@ -110,7 +127,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 .modal-text h2 {
@@ -122,10 +139,18 @@
 }
 
 .modal-body {
-  font-size: 1rem;
+  font-size: 17px;
   line-height: 1.6;
   color: #333;
   margin: 0;
+  text-align: left;
+}
+
+.modal-timestamp {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  margin-top: 6px;
   text-align: left;
 }
 
@@ -147,7 +172,7 @@
   }
   
   .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .modal-overlay {
