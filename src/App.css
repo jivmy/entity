@@ -51,6 +51,7 @@
 
 .project-square spline-viewer {
   pointer-events: auto;
+  touch-action: pan-y;
 }
 
 /* Tooltip Styles */
