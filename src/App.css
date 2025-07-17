@@ -49,6 +49,11 @@
   border-radius: 48px 48px 36px 36px;
 }
 
+.project-square spline-viewer {
+  touch-action: none;
+  pointer-events: auto;
+}
+
 /* Tooltip Styles */
 .tooltip {
   position: fixed;
