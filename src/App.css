@@ -178,6 +178,7 @@
   
   .projects-grid {
     grid-template-columns: 1fr;
+    max-width: 100vw;
   }
 
   .modal-overlay {
@@ -211,6 +212,7 @@
   
   .projects-grid {
     grid-template-columns: 1fr;
+    max-width: 100vw;
   }
 
   .modal-text {
