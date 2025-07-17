@@ -50,7 +50,6 @@
 }
 
 .project-square spline-viewer {
-  touch-action: none;
   pointer-events: auto;
 }
 
